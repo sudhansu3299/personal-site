@@ -1,6 +1,7 @@
 ---
 title: Why I Started What the ... WHAT!?
-pubDatetime: 2025-06-27T1:30:00Z
+pubDatetime: 2025-06-27T23:20:00Z
+modDatetime: 2025-06-27T23:35:00Z
 tags: 
   - personal
   - essay
@@ -15,7 +16,7 @@ I've always wanted a place to express ideas freely — a quiet corner of the web
 
 ### What You'll Find Here
 
-- Personal essays on life, philosophy, and introspection
+- Personal essays on life, philosophy, and most importantly shayaris!
 - Occasional tech posts about things I'm learning
 - Notes and reflections on books, people, and experiences
 
