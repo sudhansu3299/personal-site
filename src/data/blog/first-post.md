@@ -1,7 +1,6 @@
 ---
 title: Why I Started What the ... WHAT!?
-pubDatetime: 2025-06-28T12:00:00Z
-modDatetime: 2025-06-28T12:00:00Z
+pubDatetime: 2025-06-27T1:30:00Z
 tags: 
   - personal
   - essay
