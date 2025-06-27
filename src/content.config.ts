@@ -16,25 +16,47 @@ const blog = defineCollection({
     z.object({
       author: z.string().default(SITE.author),
       pubDatetime: z.preprocess((val) => {
-                           const input = typeof val === "string" ? val : new Date(val).toISOString();
-                           const utcDate = dayjs.tz(input, "Asia/Kolkata").utc().toDate();
+                     let input: string;
 
-                           // ✅ Log IST input and resulting UTC
-                           console.log("IST input:", input);
-                           console.log("Converted to UTC:", utcDate.toISOString());
+                     if (typeof val === "string") {
+                       input = val;
+                     } else if (val instanceof Date) {
+                       input = val.toISOString();
+                     } else {
+                       throw new Error("Invalid date format in pubDatetime");
+                     }
 
-                           return utcDate;
-                         }, z.date()),
+                     const utcDate = dayjs.tz(input, "Asia/Kolkata").utc().toDate();
+
+                     if (process.env.NODE_ENV === "development") {
+                       console.log("IST input:", input);
+                       console.log("Converted to UTC:", utcDate.toISOString());
+                     }
+
+                     return utcDate;
+                   }, z.date()),
       modDatetime: z.preprocess((val) => {
-                           if (!val) return null;
-                           const input = typeof val === "string" ? val : new Date(val).toISOString();
-                           const utcDate = dayjs.tz(input, "Asia/Kolkata").utc().toDate();
+                     if (!val) return null;
 
-                           console.log("Modified IST input:", input);
-                           console.log("Modified UTC:", utcDate.toISOString());
+                     let input: string;
 
-                           return utcDate;
-                         }, z.date().nullable().optional()),
+                     if (typeof val === "string") {
+                       input = val;
+                     } else if (val instanceof Date) {
+                       input = val.toISOString();
+                     } else {
+                       throw new Error("Invalid date format in modDatetime");
+                     }
+
+                     const utcDate = dayjs.tz(input, "Asia/Kolkata").utc().toDate();
+
+                     if (process.env.NODE_ENV === "development") {
+                       console.log("Modified IST input:", input);
+                       console.log("Modified UTC:", utcDate.toISOString());
+                     }
+
+                     return utcDate;
+                   }, z.date().nullable().optional()),
       title: z.string(),
       featured: z.boolean().optional(),
       draft: z.boolean().optional(),
