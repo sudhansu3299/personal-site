@@ -2,4 +2,4 @@
 
 Just a personal site to jot things down! Go visit the site dude!!!
 
-sudhansu.tech
+Hosted in Vercel
