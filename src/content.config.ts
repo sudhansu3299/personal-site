@@ -28,10 +28,10 @@ const blog = defineCollection({
 
                      const utcDate = dayjs.tz(input, "Asia/Kolkata").utc().toDate();
 
-                     if (process.env.NODE_ENV === "development") {
-                       console.log("IST input:", input);
-                       console.log("Converted to UTC:", utcDate.toISOString());
-                     }
+//                      if (process.env.NODE_ENV === "development") {
+//                        console.log("IST input:", input);
+//                        console.log("Converted to UTC:", utcDate.toISOString());
+//                      }
 
                      return utcDate;
                    }, z.date()),
@@ -50,10 +50,10 @@ const blog = defineCollection({
 
                      const utcDate = dayjs.tz(input, "Asia/Kolkata").utc().toDate();
 
-                     if (process.env.NODE_ENV === "development") {
-                       console.log("Modified IST input:", input);
-                       console.log("Modified UTC:", utcDate.toISOString());
-                     }
+//                      if (process.env.NODE_ENV === "development") {
+//                        console.log("Modified IST input:", input);
+//                        console.log("Modified UTC:", utcDate.toISOString());
+//                      }
 
                      return utcDate;
                    }, z.date().nullable().optional()),
