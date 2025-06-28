@@ -42,6 +42,8 @@ const backUrl = SITE.showBackButton ? Astro.url.pathname : "/";
   <slot />
 </main>
 
+<link rel="preload" href="https://giscus.app/client.js" as="script">
+
 <script>
   document.addEventListener("astro:page-load", () => {
     const mainContent: HTMLElement | null =
