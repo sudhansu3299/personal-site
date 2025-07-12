@@ -6,7 +6,7 @@ tags:
   - personal
   - poetry
   - shayari
-description: 
+description: How I started reading, writing and admiring shayari!
 author: Sudhansu
 draft: false
 ---
