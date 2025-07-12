@@ -1,7 +1,7 @@
 ---
 title: Shayari (read as~ life's pain projected as poetry in intellectual format)
-pubDatetime: 2025-07-12T22:54:00
-modDatetime: 2025-07-12T22:54:00
+pubDatetime: 2025-07-12T18:30:00
+modDatetime: 2025-07-12T18:30:00
 tags: 
   - personal
   - poetry
